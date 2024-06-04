@@ -1,0 +1,218 @@
+/**
+ * @name Ocean Theme
+ * @author Marsh
+ * @version 1.0.0
+ * @description Display your picture of choice with adjustable blur and brightness. Dark theme is required. Based on Frosted Glass Theme by Gibbu I just added extra stuff to it for better compability with some of the css on discord
+ * **/
+
+@import url("https://minidiscordthemes.github.io/Snippets/MinimalSearchbar/main.css");
+@import url("https://discordstyles.github.io/FrostedGlass/dist/FrostedGlass.css");
+
+/* BlackBox tags */
+@import url('https://monstrousdev.github.io/themes/addons/user-tags.css');
+
+/* Old Windows titlebar - remove this @import if you wish to use default titlebar */
+@import url("https://gibbu.github.io/BetterDiscord-Themes/addons/windows-titlebar.css");
+
+/** My favorite font to use but you can swap this **/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/** Changes Styles of Forums **/
+.container_b92032 {
+  background: rgba(0,0,0,.1);
+}
+
+.theme-dark .container_de2a56.isOpen__8593d {
+  background: linear-gradient(90deg, rgb(var(--gradient-primary), .5), rgb(var(--gradient-secondary), .1));
+}
+
+/* Changing opacity of call container background to be transparent */
+#app-mount .sidebar_ded4b5{
+  background: rgba(0,0,0,.75);
+}
+
+#app-mount .avatarWrapper__76c62{
+  box-shadow: 0 0 10px rgba(0,0,0,.25);
+}
+
+.callContainer__1477d{
+  background-color: rgba(0,0,0,.1);
+}
+
+#app-mount .mentioned__58017{
+  background: linear-gradient(90deg, rgb(var(--gradient-primary), .5), rgb(var(--gradient-secondary), .1)) !important;
+}
+
+#app-mount .divider_b9338f.isUnread__6f880 {
+  border-top: 1px solid var(--sea-green) !important;
+}
+
+/** Unread indicators **/
+.unreadPill__715fc{
+  background-color: var(--sea-green);
+}
+
+.unreadPillCapStroke__12c0b{
+  color: var(--sea-green);
+  fill: var(--sea-green);
+}
+
+#app-mount .form__13a2c .placeholder__4bea5,
+#app-mount .form__13a2c .slateTextArea__0661c{
+  color:rgba(255, 255, 255, 0.75);
+}
+
+
+/** Changes speaking animation **/
+#app-mount .border_d9a17b.speaking__9b95a{
+  box-shadow: inset 0 0 0 2px var(--seafoam),inset 0 0 0 3px var(--grey-slate);
+  transition: all .5s ease-in-out;
+}
+
+#app-mount .avatarSpeaking_c95053 {
+  box-shadow: inset 0 0 0 2px var(--seafoam),inset 0 0 0 3px var(--grey-slate);
+}
+
+#app-mount .avatarSpeaking__61fb1{
+  box-shadow: inset 0 0 0 2px var(--seafoam),inset 0 0 0 3px var(--grey-slate);
+}
+
+/** Changes levels **/
+.numberBadge__50328 {
+  background-color: var(--background-accent)!important;
+}
+
+[class*="timestamp"][class*="CompactTimeStamp"] {
+  opacity: 0;
+  will-change: opacity;
+}
+
+.wrapper__7bcde .link__95dc0 /* channels */,
+.container__4f20e /* members */,
+.channel_c21703 /* dms */,
+.side_b4b3f6 .item__48dda /* settings */ {
+    transition: margin-left 0.2s ease;
+}
+.wrapper__7bcde:hover .link__95dc0,
+.side_b4b3f6 .item__48dda:hover {
+    margin-left: 10px;
+    background: linear-gradient(90deg, rgba(var(--gradient-primary),.5), rgba(var(--gradient-secondary),.5)) !important;
+}
+.container__4f20e:hover,
+.channel_c21703:hover {
+    margin-left: 18px;
+    background: linear-gradient(90deg, rgba(var(--gradient-primary),.5), rgba(var(--gradient-secondary),.5)) !important;
+}
+
+.numberBadge__50328{
+  background-color: var(--sea-green) !important;
+}
+
+.container_b181b6 {
+  background: transparent;
+  gap:5%;
+}
+
+#app-mount .jumpToPresentBar__69174{
+  background-color: rgb(var(--gradient-primary), 1);
+}
+
+#app-mount .jumpToPresentBar__69174:hover{
+  background-color: rgb(var(--gradient-primary), 1);
+}
+
+.increasedActivityMainCard__916ed {
+  margin-top: 20px;
+  color: white !important;
+  background: linear-gradient(90deg, rgba(var(--gradient-primary),.5), rgba(var(--gradient-secondary),.5));
+}
+
+.increasedActivityMainCard__916ed:hover{
+  background: linear-gradient(90deg, rgba(var(--gradient-primary),.9), rgba(var(--gradient-secondary),.9));
+}
+
+.container_c24cbd {
+  background: linear-gradient(90deg, rgba(var(--gradient-primary),.5), rgba(var(--gradient-secondary),.5));
+}
+
+.container_c24cbd:hover{
+  background: linear-gradient(90deg, rgba(var(--gradient-primary),.9), rgba(var(--gradient-secondary),.9));
+}
+
+.theme-dark .textContentFooter__5a630{
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(73,71,59,0.5) 30%, rgba(73,71,59,1) 60%);
+}
+
+[class*="expressionPickerPositionLayer_"] [class*="positionContainer_"] {
+  height: calc(100vh - 128px);
+}
+[class*="expressionPickerPositionLayer_"] [class*="drawerSizingWrapper_"] {
+  max-height: 100%;
+  bottom: 0px;
+  height: auto;
+  aspect-ratio: var(--expression-picker-aspect-ratio);
+}
+/* Fixes soundmoji picker which has a hardcoded height */
+[class*="expressionPickerPositionLayer_"] [class*="soundboardContainer_"] [class*="picker_"] {
+  height: 100%;
+}
+
+:root {
+  /** **/
+  --expression-picker-aspect-ratio: 1.125 / 4;
+  /** **/
+  --sea-green: #5A858B;
+  --seafoam: #C1D9E3;
+  --ocean-blue: rgb(75,95,106);
+  --grey-slate: rgb(73,71,59);
+  --transparency-10: rgba(0,0,0,.1);
+
+  /* Background image variables */
+  --background-image: url('https://i.imgur.com/AvlQz4S.jpg'); /* Main background image | URL MUST BE A DIRECT LINK (ending in .jpg, .jpeg, .png, .gif) */
+  --background-image-blur: 1px; /* Blur intensity of --background-image | Must end in px | DEFAULT: 5px */
+  --background-image-size: cover; /* Size of the background image | DEFAUT: cover | OPTIONS: cover, contain */
+  --background-image-position: center; /* Position of background image | DEAFULT: center | OPTIONS: top, right, bottom, left, center */
+
+  /* Popout & Modal variables */
+  --popout-modal-image: var(--background-image); /* Background image for popouts and modals | URL MUST BE A DIRECT LINK (ending in .jpg, .jpeg, .png, .gif) */
+  --popout-modal-blur: 5px; /* Blur intensity of --popout-modal-image | Must end in px | DEFAULT: 5px */
+  --popout-modal-size: cover; /* Size of the popout/modal image | DEFAUT: cover | OPTIONS: cover, contain */
+  --popout-modal-position: center; /* Position of popout/modal image | DEAFULT: center | OPTIONS: top, right, bottom, left, center */
+
+  /* Home image variables */
+  --home-button-image: url('https://gibbu.github.io/BetterDiscord-Themes/FrostedGlass/assets/discord.svg'); /* Home button image | URL MUST BE A DIRECT LINK (ending in .jpg, .jpeg, .png, .gif) */
+  --home-button-size: cover; /* Size of the home button image | DEFAUT: cover */
+  --home-button-position: center; /* Position of home button image | DEAFULT: center */
+
+  /* Brightness variables */
+  --serverlist-brightness: 0.8; /* Brightness for serverlist | 0 - 1 (decimals allowed) | DEFAULT: 0.8 */
+  --left-brightness: 0.8; /* Channels and DM list brightness | 0 - 1 (decimals allowed) | DEFAULT: 0.8 */
+  --middle-brightness: 0.6; /* Chat brightness | 0 - 1 (decimals allowed) | DEFAULT: 0.6 */
+  --right-brightness: 0; /* Members and Now Playing brightness | 0 - 1 (decimals allowed) | DEFAULT: 0 */
+  --popout-modal-brightness: 0.75; /* Brightness for popouts and modals | 0 - 1 (decimals allowed) | DEFAULT: 0.75 */
+
+  /* Gradient variables */
+  --gradient-primary: 75,95,106; /* DEFAULT: 103,58,183 */
+  --gradient-secondary: 73,71,59; /* DEFAULT: 63,81,181 */
+  --gradient-direction: 90deg; /* DEFAULT: 320deg */
+
+  /* Tint variables */
+  --tint-colour: 255,51,159; /* Colour of tint | DEAFULT: 255,51,159 */
+  --tint-brightness: 0; /* Brightness of --tint-colour | 0 - 1 (decimals allowed) | DEFAULT: 0 */
+
+  /* Other variables */
+  --window-padding: 15px; /* Spacing around the Discord window | DEFAULT: 20px */
+  --window-roundness: 10px; /* Roundness of Discord | DEFAULT: 10px */
+  --scrollbar-colour: rgba(255,255,255,0.15); /* DEFAULT: rgba(255,255,255,0.05) */
+  --link-colour: #00b0f4; /* DEFAULT: #00b0f4 */
+
+  /*
+    Visit https://fonts.google.com and select one to your liking.
+    Now just follow this tutorial: https://imgur.com/a/CNbw7xC
+  */
+  --font: 'Raleway';
+
+  /* Do not touch */
+  --update-notice-1: none;
+}
